@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#123b32">
+<title>HEALTH HERO | ภารกิจพิชิตเหตุฉุกเฉิน</title>
+<style>
+:root{--green:#123b32;--green2:#1d6a51;--mint:#dff5e9;--cream:#fff9ed;--orange:#ffb547;--red:#e85d52;--ink:#18332d;--muted:#657a73;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#e8f7ef,#fff6e5);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button:focus-visible,input:focus-visible{outline:3px solid #ffb547;outline-offset:3px}.app{max-width:1000px;margin:auto;padding:16px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.4px;color:var(--green)}.logo{width:46px;height:46px;border-radius:15px;background:var(--green);color:white;display:grid;place-items:center;font-size:25px;box-shadow:0 5px 0 #a7d9be}.pill{background:#fff;border:1px solid #d9e9df;border-radius:99px;padding:8px 12px;font-size:13px;font-weight:700}.screen{display:none}.screen.active{display:block}.hero{background:var(--green);color:white;border-radius:28px;padding:clamp(22px,5vw,48px);position:relative;overflow:hidden;box-shadow:0 14px 30px #123b3220}.hero:after{content:"✚";position:absolute;font-size:190px;right:5%;bottom:-55px;color:#ffffff0d;transform:rotate(-15deg)}.eyebrow{color:#b9efd0;font-weight:800;font-size:13px;letter-spacing:1.3px}.hero h1{font-size:clamp(34px,7vw,64px);line-height:1.03;margin:12px 0}.hero h1 span{color:var(--orange)}.hero p{max-width:620px;color:#e0f2e8;line-height:1.7}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}.hero-art{font-size:clamp(80px,15vw,145px);text-align:center;filter:drop-shadow(0 10px 0 #00000018)}.btn{border:0;border-radius:14px;padding:13px 18px;font-weight:850;transition:transform .12s,filter .12s;min-height:46px}.btn:active{transform:scale(.98)}.primary{background:var(--orange);color:#3b2b0a;box-shadow:0 4px 0 #cf8727}.secondary{background:#e4f5eb;color:var(--green);border:1px solid #c5e5d2}.dark{background:var(--green);color:white}.light{background:white;color:var(--green);border:1px solid #d7e8de}.danger{background:#ffe7e3;color:#9a2f28}.full{width:100%}.formrow{display:flex;gap:10px;margin-top:18px;max-width:520px}.formrow input{min-width:0;flex:1;border:2px solid #c8e4d4;border-radius:13px;padding:12px 14px;background:white;color:var(--ink)}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.mini{background:#ffffff12;border:1px solid #ffffff20;border-radius:14px;padding:12px}.mini b{display:block;color:var(--orange);font-size:20px}.mini small{color:#e0f2e8}.panel{background:#fff;border:1px solid #e0eee5;border-radius:22px;padding:clamp(16px,3vw,26px);box-shadow:0 8px 24px #123b320b;margin-bottom:14px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.section-head h2{margin:0;font-size:clamp(22px,4vw,30px)}.muted{color:var(--muted);line-height:1.65}.mapgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}.level{border:2px solid #e0eee5;border-radius:18px;padding:17px;background:#fbfffc;text-align:left;min-height:150px;display:flex;flex-direction:column;gap:8px;color:var(--ink)}.level .num{font-size:12px;font-weight:900;color:var(--green2);letter-spacing:1px}.level .emoji{font-size:30px}.level strong{font-size:18px}.level small{color:var(--muted);line-height:1.45}.level.done{border-color:#67b88c;background:#effbf3}.level.locked{opacity:.55;background:#f4f6f4;cursor:not-allowed}.level:not(.locked):hover{border-color:var(--green2);transform:translateY(-2px)}.progress-wrap{background:#e6eee9;border-radius:99px;height:10px;overflow:hidden;margin:10px 0}.progress{height:100%;width:0;background:linear-gradient(90deg,#1d6a51,#80d69f);transition:width .25s}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{background:var(--cream);border-radius:14px;padding:12px;text-align:center}.stat b{font-size:22px;display:block;color:var(--green)}.stat span{font-size:12px;color:var(--muted)}.question-title{font-size:clamp(21px,4vw,29px);line-height:1.35;margin:12px 0}.scene{background:linear-gradient(135deg,#e1f5e9,#fff0d5);border-radius:18px;padding:18px;display:flex;align-items:center;gap:14px;margin:14px 0}.scene .big{font-size:48px;flex-shrink:0}.scene p{margin:0;line-height:1.6}.choices{display:grid;gap:10px;margin:16px 0}.choice{display:flex;align-items:flex-start;gap:12px;text-align:left;border:2px solid #e1ece5;background:#fff;border-radius:15px;padding:14px;color:var(--ink);line-height:1.5;min-height:54px}.choice .letter{flex:0 0 30px;height:30px;border-radius:9px;background:#e5f5eb;display:grid;place-items:center;font-weight:900;color:var(--green)}.choice:hover{border-color:#6cb78e}.choice.correct{border-color:#29965c;background:#effbf3}.choice.wrong{border-color:#e85d52;background:#fff2f0}.choice:disabled{cursor:default}.feedback{padding:15px;border-radius:14px;line-height:1.65;margin:12px 0}.feedback.good{background:#e6f8ed;border:1px solid #a7dfba}.feedback.bad{background:#fff0e5;border:1px solid #f3c69c}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.actions .btn{flex:1}.timer{font-variant-numeric:tabular-nums;font-weight:900;color:#9a5420;background:#fff0d6;border-radius:12px;padding:8px 12px}.quiz-option{display:flex;gap:12px;align-items:flex-start;padding:14px;border:2px solid #e1ece5;border-radius:14px;margin:9px 0;line-height:1.5;cursor:pointer}.quiz-option input{margin-top:5px;accent-color:var(--green2);transform:scale(1.2)}.result{text-align:center;padding:20px}.medal{font-size:70px}.scorebig{font-size:clamp(38px,8vw,62px);font-weight:950;color:var(--green);line-height:1.1}.footer{text-align:center;color:#6c8278;font-size:12px;padding:18px 8px 28px}.notice{background:#fff8df;border:1px solid #f2dda0;border-radius:14px;padding:13px;line-height:1.6;font-size:14px}.hidden{display:none!important}.small{font-size:13px}.rule-list{padding-left:21px;line-height:1.8}.tag{display:inline-block;border-radius:99px;background:#e7f5ec;color:#236448;padding:5px 10px;font-size:12px;font-weight:800}
+@media(max-width:650px){.app{padding:10px}.hero-grid{grid-template-columns:1fr}.hero-art{display:none}.hero{border-radius:22px}.mini-grid{grid-template-columns:repeat(3,1fr)}.mini{padding:9px}.formrow{flex-direction:column}.mapgrid{grid-template-columns:1fr}.level{min-height:0}.statrow{gap:6px}.stat{padding:10px 5px}.stat b{font-size:19px}.scene{align-items:flex-start}.scene .big{font-size:38px}.topbar{align-items:flex-start}.pill{font-size:11px}.actions{flex-direction:column}.actions .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brand"><div class="logo">✚</div><div>HEALTH HERO<br><span class="small">ภารกิจพิชิตเหตุฉุกเฉิน</span></div></div>
+  <div class="pill">สุขศึกษา ม.1 · พ 5.1 ม.1/1</div>
+</header>
+
+<section id="home" class="screen active">
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">EMERGENCY MISSION • GAME-BASED LEARNING</div>
+        <h1>พร้อมเป็น<br><span>HEALTH HERO</span> ไหม?</h1>
+        <p>เมื่อเกิดเหตุฉุกเฉิน ทุกการตัดสินใจมีความหมาย รวมทีมของคุณ วิเคราะห์สถานการณ์ เลือกวิธีช่วยเหลือที่ปลอดภัย และปลดล็อกภารกิจทั้ง 4 ด่าน!</p>
+        <label for="teamName" class="small">ชื่อทีมของคุณ</label>
+        <div class="formrow"><input id="teamName" maxlength="30" placeholder="เช่น ทีมฮีโร่สายฟ้า" autocomplete="off"><button class="btn primary" id="startBtn">เริ่มภารกิจ →</button></div>
+        <div class="mini-grid"><div class="mini"><b>4 ด่าน</b><small>ภารกิจฉุกเฉิน</small></div><div class="mini"><b>จับเวลา</b><small>คิดให้รอบคอบ</small></div><div class="mini"><b>เป็นทีม</b><small>ช่วยกันตัดสินใจ</small></div></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">🧑‍🚒🩹</div>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:14px">
+    <h2>🎯 เป้าหมายการเรียนรู้</h2>
+    <p class="muted">ฝึกวิเคราะห์ความปลอดภัย เลือกการปฐมพยาบาลเบื้องต้น และรู้จักขอความช่วยเหลืออย่างเหมาะสม โดยไม่เสี่ยงอันตรายต่อตนเองและผู้อื่น</p>
+    <div class="notice"><b>กติกาความปลอดภัย:</b> เกมนี้เป็นสถานการณ์จำลองเพื่อการเรียนรู้ ไม่แทนการฝึกปฐมพยาบาลจริง ให้ทำตามคำแนะนำของครูและเจ้าหน้าที่ฉุกเฉินเสมอ</div>
+  </div>
+</section>
+
+<section id="pretest" class="screen">
+  <div class="panel">
+    <div class="tag">ภารกิจเตรียมความพร้อม</div><h2>🧠 แบบทดสอบก่อนเรียน</h2>
+    <p class="muted">ตอบ 5 ข้อเพื่อสำรวจความรู้เดิม คะแนนส่วนนี้จะไม่รวมกับคะแนนเกม</p>
+    <div id="preQuestions"></div>
+    <button class="btn primary full" id="submitPre">ส่งคำตอบและไปแผนที่ →</button>
+  </div>
+</section>
+
+<section id="map" class="screen">
+  <div class="panel">
+    <div class="section-head"><div><div class="tag">MISSION MAP</div><h2>🗺️ แผนที่ภารกิจ</h2><p class="muted" id="welcomeTeam">ทีมฮีโร่ พร้อมลุยหรือยัง?</p></div><button class="btn light" id="backHome">หน้าแรก</button></div>
+    <div class="statrow"><div class="stat"><b id="scoreStat">0</b><span>คะแนนเกม</span></div><div class="stat"><b id="doneStat">0/4</b><span>ด่านที่ผ่าน</span></div><div class="stat"><b id="medalStat">0</b><span>เหรียญตรา</span></div></div>
+    <div class="progress-wrap"><div id="mapProgress" class="progress"></div></div>
+    <div class="mapgrid" id="mapGrid"></div>
+    <div class="notice" style="margin-top:15px">💡 <b>เคล็ดลับ:</b> คะแนนสูงไม่สำคัญเท่าการเลือกวิธีช่วยเหลือที่ปลอดภัย อ่านคำอธิบายทุกครั้งก่อนเดินทางต่อ</div>
+  </div>
+</section>
+
+<section id="mission" class="screen">
+  <div class="panel">
+    <div class="section-head"><button class="btn light" id="toMap">← แผนที่</button><span class="timer" id="timer">⏱ 00:45</span></div>
+    <div class="progress-wrap"><div id="missionProgress" class="progress"></div></div>
+    <div class="tag" id="missionTag">ด่าน 1</div>
+    <h2 id="missionName">ภารกิจ</h2>
+    <div class="scene"><div class="big" id="sceneEmoji">⚠️</div><p id="sceneText"></p></div>
+    <div class="muted small" id="questionCount"></div>
+    <h3 class="question-title" id="questionText"></h3>
+    <div class="choices" id="choices"></div>
+    <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+    <div class="actions"><button class="btn primary full hidden" id="nextQuestion">ข้อต่อไป →</button></div>
+  </div>
+</section>
+
+<section id="posttest" class="screen">
+  <div class="panel">
+    <div class="tag">FINAL CHECKPOINT</div><h2>🏁 แบบทดสอบหลังเรียน</h2>
+    <p class="muted">ตอบ 5 ข้อเพื่อทบทวนสิ่งที่ได้เรียนรู้ คะแนนนี้ใช้เปรียบเทียบกับแบบทดสอบก่อนเรียน</p>
+    <div id="postQuestions"></div>
+    <button class="btn primary full" id="submitPost">ส่งคำตอบและดูผลลัพธ์ →</button>
+  </div>
+</section>
+
+<section id="results" class="screen">
+  <div class="panel result">
+    <div class="medal" id="resultMedal">🏆</div><div class="tag">MISSION COMPLETE</div>
+    <h2 id="resultTitle">ภารกิจสำเร็จ!</h2>
+    <p class="muted" id="resultTeam"></p>
+    <div class="scorebig" id="finalScore">0</div><p class="muted">คะแนนเกมจาก 120 คะแนน</p>
+    <div class="statrow"><div class="stat"><b id="finalLevels">0/4</b><span>ด่านที่ผ่าน</span></div><div class="stat"><b id="preResult">—</b><span>ก่อนเรียน / 5</span></div><div class="stat"><b id="postResult">—</b><span>หลังเรียน / 5</span></div></div>
+    <div class="panel" style="text-align:left;margin-top:16px;box-shadow:none">
+      <h3>📈 สรุปผลการเรียนรู้</h3><p id="learningSummary" class="muted"></p>
+      <h3>🌟 เหรียญตราที่ได้รับ</h3><p id="finalMedals" class="muted"></p>
+      <div class="notice">คะแนนในเกมสะท้อนการตอบสถานการณ์จำลอง ไม่ใช่การรับรองว่าผู้เล่นสามารถปฐมพยาบาลจริงได้ ควรฝึกปฏิบัติภายใต้การดูแลของครูหรือผู้ฝึกสอน</div>
+    </div>
+    <div class="actions"><button class="btn primary" id="restartBtn">เล่นใหม่อีกครั้ง</button><button class="btn secondary" id="printBtn">พิมพ์ / บันทึกผล</button></div>
+  </div>
+</section>
+
+<footer class="footer">HEALTH HERO • สื่อการเรียนรู้สุขศึกษา ม.1 • พัฒนาสำหรับการเรียนรู้แบบร่วมมือ</footer>
+</div>
+<script>
+"use strict";
+const levels = [
+ {name:"ด่าน 1: Scene Safety",short:"ประเมินจุดเกิดเหตุ",emoji:"⚡",desc:"มองให้รอบก่อนเข้าไปช่วย",badge:"ผู้พิทักษ์ความปลอดภัย",questions:[
+  {scene:"ในสนามโรงเรียน เพื่อนล้มอยู่ใกล้สายไฟที่ชำรุด ยังไม่ทราบว่ามีกระแสไฟหรือไม่",q:"ทีมควรทำสิ่งใดเป็นอันดับแรก?",opts:["รีบวิ่งเข้าไปพยุงเพื่อนทันที","หยุดในจุดปลอดภัย กั้นคนไม่ให้เข้าใกล้ และแจ้งครูหรือเจ้าหน้าที่","ใช้มือดึงเพื่อนออกจากบริเวณสายไฟ"],a:1,why:"ต้องประเมินความปลอดภัยของจุดเกิดเหตุก่อน ไม่เข้าใกล้หรือสัมผัสผู้ที่อาจเกี่ยวข้องกับกระแสไฟฟ้า ให้ผู้มีหน้าที่จัดการอันตราย"},
+  {scene:"เพื่อนล้มในทางเดินที่มีเศษแก้วกระจายอยู่",q:"ก่อนเข้าไปช่วย ทีมควรทำอย่างไร?",opts:["ตรวจดูอันตรายรอบตัวและขอให้คนช่วยจัดการพื้นที่อย่างปลอดภัย","เดินลุยเศษแก้วเพื่อไปถึงตัวเพื่อนให้เร็วที่สุด","ให้เพื่อนอีกคนวิ่งเข้าไปโดยไม่ต้องบอกอะไร"],a:0,why:"พื้นที่เกิดเหตุอาจทำให้ผู้ช่วยบาดเจ็บเพิ่ม ต้องหยุดประเมินความเสี่ยง รักษาระยะห่างจากอันตราย และเรียกผู้ใหญ่หรือเจ้าหน้าที่"},
+  {scene:"มีคนล้มลงในบริเวณที่รถกำลังสัญจร",q:"แนวทางใดปลอดภัยที่สุดสำหรับนักเรียน?",opts:["วิ่งตัดถนนไปช่วยทันที","ยืนถ่ายวิดีโอเพื่อดูอาการ","อยู่ในจุดปลอดภัย แจ้งผู้ใหญ่หรือเจ้าหน้าที่ให้ช่วยควบคุมพื้นที่"],a:2,why:"อย่าเพิ่มผู้บาดเจ็บจากการเข้าไปในบริเวณเสี่ยง ให้ผู้ใหญ่หรือเจ้าหน้าที่ควบคุมพื้นที่ก่อนเข้าช่วย"}
+ ]},
+ {name:"ด่าน 2: First Aid",short:"ปฐมพยาบาลเบื้องต้น",emoji:"🩹",desc:"เลือกวิธีดูแลเบื้องต้นให้เหมาะสม",badge:"ผู้ช่วยเหลือใส่ใจ",questions:[
+  {scene:"เพื่อนรู้สึกตัวดี มีแผลถลอกเล็กน้อยหลังหกล้มในสนาม",q:"ควรดูแลแผลเบื้องต้นอย่างไร?",opts:["ใช้มือเปล่าที่ไม่ได้ล้างสัมผัสแผล","ใช้น้ำสะอาดล้างแผล สวมอุปกรณ์ป้องกัน และปิดด้วยวัสดุสะอาดตามความเหมาะสม","ใช้ดินหรือแป้งโรยแผล"],a:1,why:"การล้างแผลด้วยน้ำสะอาดและป้องกันการปนเปื้อนช่วยลดความเสี่ยงติดเชื้อ หลีกเลี่ยงสิ่งสกปรก หากแผลรุนแรงให้ขอความช่วยเหลือ"},
+  {scene:"เพื่อนมีเลือดออกจากบาดแผล และยังรู้สึกตัวดี",q:"ถ้าไม่มีสิ่งแปลกปลอมฝังในแผล ควรทำอย่างไรระหว่างรอผู้ใหญ่?",opts:["กดแผลด้วยผ้าสะอาดหรือวัสดุปิดแผล พร้อมสวมถุงมือหรือใช้สิ่งกั้นเมื่อทำได้","ล้างแผลไปเรื่อย ๆ โดยไม่กดห้ามเลือด","ให้ผู้บาดเจ็บเดินไปห้องพยาบาลเองเสมอ"],a:0,why:"การกดตรงแผลด้วยวัสดุสะอาดเป็นวิธีช่วยห้ามเลือดเบื้องต้นที่ใช้ได้ในหลายกรณี และต้องรีบขอความช่วยเหลือหากเลือดออกมากหรือไม่หยุด"},
+  {scene:"เพื่อนข้อเท้าพลิกระหว่างเล่นกีฬาและเจ็บมาก",q:"การตัดสินใจเบื้องต้นข้อใดเหมาะสม?",opts:["บังคับให้วิ่งต่อเพื่อทดสอบอาการ","ดึงข้อเท้าให้เข้าที่ด้วยตนเอง","หยุดกิจกรรม ช่วยให้อยู่ในท่าที่สบาย และแจ้งครูหรือผู้ใหญ่เพื่อประเมิน"],a:2,why:"ไม่ควรฝืนใช้งานหรือดัดข้อที่อาจบาดเจ็บ ให้หยุดกิจกรรมและขอให้ผู้ใหญ่ประเมิน โดยเฉพาะเมื่อปวดมาก บวมมาก หรือเดินลงน้ำหนักไม่ได้"}
+ ]},
+ {name:"ด่าน 3: Emergency Call",short:"สื่อสารขอความช่วยเหลือ",emoji:"📞",desc:"ส่งข้อมูลให้ผู้ช่วยเหลือเข้าใจเร็ว",badge:"นักสื่อสารฉุกเฉิน",questions:[
+  {scene:"พบผู้บาดเจ็บหมดสติในโรงเรียน บริเวณอาคารเรียน",q:"ข้อมูลใดควรแจ้งผู้ใหญ่หรือผู้รับแจ้งเหตุฉุกเฉิน?",opts:["บอกเพียงชื่อโรงเรียนแล้ววางสาย","แจ้งสถานที่เกิดเหตุ ลักษณะเหตุการณ์ อาการที่สังเกตได้ และทำตามคำแนะนำ","ส่งข้อความในกลุ่มเพื่อนแล้วรอ"],a:1,why:"ข้อมูลสถานที่และอาการช่วยให้ผู้ช่วยเหลือประเมินและเข้าถึงจุดเกิดเหตุได้ ควรให้ผู้ใหญ่ติดต่อบริการฉุกเฉินและไม่วางสายจนได้รับคำแนะนำ"},
+  {scene:"ทีมต้องขอความช่วยเหลือจากครูเพราะมีเพื่อนบาดเจ็บ",q:"การสื่อสารแบบใดช่วยให้ครูเข้าใจสถานการณ์ได้ชัดเจน?",opts:["พูดเสียงดังหลายคนพร้อมกัน","พูดว่าเกิดเรื่องแล้วให้ครูเดาเอง","ให้คนหนึ่งรายงานอย่างสงบ ระบุจุดเกิดเหตุ จำนวนผู้บาดเจ็บ และอาการที่เห็น"],a:2,why:"การรายงานอย่างชัดเจนและเป็นลำดับช่วยลดความสับสน ระบุข้อมูลที่สังเกตได้จริงและทำตามคำแนะนำของผู้รับแจ้งเหตุ"},
+  {scene:"ผู้ใหญ่กำลังโทรขอความช่วยเหลือ นักเรียนอยู่ใกล้จุดเกิดเหตุ",q:"นักเรียนควรทำอย่างไร?",opts:["ทำตามคำแนะนำของผู้ใหญ่ ดูแลพื้นที่ให้ปลอดภัย และช่วยให้ข้อมูลที่จำเป็น","แย่งโทรศัพท์เพื่อพูดแทนโดยไม่บอกผู้ใหญ่","ออกจากบริเวณโดยไม่แจ้งใคร"],a:0,why:"ควรสนับสนุนผู้รับผิดชอบอย่างเป็นระบบ ไม่แย่งการสื่อสาร และไม่เข้าไปเสี่ยงอันตรายเพิ่มเติม"}
+ ]},
+ {name:"ด่าน 4: Safe Rescue",short:"ช่วยเหลืออย่างปลอดภัย",emoji:"🛟",desc:"ตัดสินใจในสถานการณ์สำคัญ",badge:"ฮีโร่ตัดสินใจปลอดภัย",questions:[
+  {scene:"เพื่อนตกจากที่สูงและบ่นเจ็บบริเวณคอหรือหลัง",q:"ควรทำอย่างไร?",opts:["รีบจับแขนลากไปยังห้องพยาบาล","ให้เพื่อนลุกขึ้นยืนเพื่อทดสอบอาการ","ไม่เคลื่อนย้ายโดยไม่จำเป็น ให้เพื่อนอยู่นิ่งในท่าที่พบ และรีบขอความช่วยเหลือ"],a:2,why:"อาจมีการบาดเจ็บบริเวณกระดูกสันหลัง การเคลื่อนย้ายโดยไม่จำเป็นอาจทำให้อาการแย่ลง ให้เจ้าหน้าที่หรือผู้ผ่านการฝึกเป็นผู้ประเมิน"},
+  {scene:"พบผู้ใหญ่หมดสติและไม่ตอบสนองในพื้นที่ปลอดภัย",q:"ขั้นตอนที่เหมาะสมสำหรับนักเรียนคือข้อใด?",opts:["รีบเรียกครูหรือผู้ใหญ่ ขอให้ติดต่อ 1669 และทำตามคำแนะนำของผู้รับแจ้งเหตุ","เขย่าตัวแรง ๆ แล้วปล่อยให้นอนต่อ","ป้อนน้ำเพื่อให้ฟื้น"],a:0,why:"ผู้หมดสติต้องได้รับการช่วยเหลือเร่งด่วน ห้ามป้อนน้ำหรืออาหาร ให้ผู้ใหญ่ติดต่อบริการการแพทย์ฉุกเฉิน 1669 และปฏิบัติตามคำแนะนำของเจ้าหน้าที่"},
+  {scene:"หลังเกิดเหตุ เพื่อนคนหนึ่งอยากย้ายผู้บาดเจ็บทันทีเพื่อให้พ้นจากสายตาคนอื่น แต่บริเวณนั้นไม่มีอันตรายเร่งด่วน",q:"ทีมควรเลือกแนวทางใด?",opts:["ย้ายทันทีเพื่อให้สะดวกต่อการถ่ายภาพ","ไม่เคลื่อนย้ายโดยไม่จำเป็น ป้องกันคนมารุม และรอคำแนะนำจากผู้ช่วยเหลือที่เหมาะสม","ให้ผู้บาดเจ็บลองลุกขึ้นเอง"],a:1,why:"ความเป็นส่วนตัวไม่ใช่เหตุผลให้เคลื่อนย้ายผู้บาดเจ็บโดยไม่จำเป็น ควรรักษาความปลอดภัย ความเป็นส่วนตัว และรอการประเมินที่เหมาะสม"}
+ ]}
+];
+const pretest = [
+ {q:"เมื่อพบผู้บาดเจ็บ สิ่งแรกที่ควรคำนึงถึงคืออะไร?",opts:["ความปลอดภัยของจุดเกิดเหตุ","การถ่ายภาพไว้เป็นหลักฐาน","การรีบเคลื่อนย้ายทุกกรณี"],a:0},
+ {q:"เมื่อพบคนหมดสติในโรงเรียน ควรทำอย่างไร?",opts:["ป้อนน้ำให้ทันที","เรียกผู้ใหญ่และขอความช่วยเหลือฉุกเฉิน","ปล่อยให้นอนพักโดยไม่บอกใคร"],a:1},
+ {q:"แผลถลอกเล็กน้อยควรดูแลอย่างไร?",opts:["โรยแป้งลงบนแผล","ใช้ของที่หยิบได้เช็ดแผล","ล้างด้วยน้ำสะอาดและป้องกันการปนเปื้อน"],a:2},
+ {q:"หากสงสัยว่าผู้บาดเจ็บเจ็บคอหรือหลัง ควรทำอย่างไร?",opts:["ไม่เคลื่อนย้ายโดยไม่จำเป็นและรีบขอความช่วยเหลือ","ดึงแขนให้ลุกขึ้น","ให้เดินทดสอบอาการ"],a:0},
+ {q:"ข้อมูลใดสำคัญเมื่อขอความช่วยเหลือฉุกเฉิน?",opts:["สีเสื้อของผู้พบเหตุเท่านั้น","สถานที่เกิดเหตุและอาการที่สังเกตได้","ความคิดเห็นว่าใครเป็นคนผิด"],a:1}
+];
+const posttest = [
+ {q:"พบคนล้มใกล้สายไฟชำรุด วิธีใดปลอดภัยที่สุด?",opts:["วิ่งเข้าไปจับตัวทันที","ใช้ไม้เขี่ยสายไฟ","อยู่ห่างจากอันตรายและแจ้งผู้ใหญ่หรือเจ้าหน้าที่"],a:2},
+ {q:"เมื่อแผลมีเลือดออกและไม่มีสิ่งแปลกปลอมฝัง ควรช่วยเบื้องต้นอย่างไร?",opts:["กดแผลด้วยวัสดุสะอาดและขอความช่วยเหลือตามความรุนแรง","เป่าแผลให้แห้ง","ใช้มือที่ไม่สะอาดกดแผล"],a:0},
+ {q:"ข้อมูลใดควรแจ้งเมื่อโทรขอความช่วยเหลือ?",opts:["เล่าเหตุการณ์โดยไม่ระบุสถานที่","สถานที่ เหตุการณ์ และอาการที่สังเกตได้","วางสายทันทีหลังบอกชื่อ"],a:1},
+ {q:"ผู้บาดเจ็บอาจเจ็บคอหรือหลังและไม่มีอันตรายเร่งด่วน ควรทำอย่างไร?",opts:["พยุงให้เดิน","นวดบริเวณที่เจ็บ","ไม่เคลื่อนย้ายโดยไม่จำเป็นและรอความช่วยเหลือ"],a:2},
+ {q:"เมื่อพบผู้หมดสติ นักเรียนควรทำอย่างไร?",opts:["ป้อนน้ำเพื่อให้ฟื้น","รีบเรียกผู้ใหญ่ ขอให้ติดต่อ 1669 และทำตามคำแนะนำ","ปล่อยให้นอนจนตื่นเอง"],a:1}
+];
+let team="ทีมฮีโร่", score=0, unlocked=1, currentLevel=0, questionIndex=0, answered=false, timerId=null, timeLeft=45, preScore=null, postScore=null, levelResults=[null,null,null,null], medals=[], levelStartScore=0;
+const $=id=>document.getElementById(id);
+function showScreen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));window.scrollTo({top:0,behavior:"smooth"});}
+function shuffleReset(){score=0;unlocked=1;currentLevel=0;questionIndex=0;answered=false;preScore=null;postScore=null;levelResults=[null,null,null,null];medals=[];clearInterval(timerId);}
+function renderTest(target,questions,prefix){$(target).innerHTML=questions.map((q,i)=>`<div class="panel" style="box-shadow:none;border-color:#e5eee8"><b>${i+1}. ${q.q}</b>${q.opts.map((o,j)=>`<label class="quiz-option"><input type="radio" name="${prefix}${i}" value="${j}"><span>${String.fromCharCode(65+j)}. ${o}</span></label>`).join("")}</div>`).join("");}
+function gradeTest(questions,prefix){let total=0;questions.forEach((q,i)=>{const chosen=document.querySelector(`input[name="${prefix}${i}"]:checked`);if(chosen&&Number(chosen.value)===q.a)total++;});return total;}
+function renderMap(){ $("welcomeTeam").textContent=`${team} พร้อมลุยหรือยัง? ผ่านด่านแล้ว ${levelResults.filter(x=>x!==null).length} จาก 4 ด่าน`; $("scoreStat").textContent=score;$("doneStat").textContent=`${levelResults.filter(x=>x!==null).length}/4`;$("medalStat").textContent=medals.length;$("mapProgress").style.width=(levelResults.filter(x=>x!==null).length/4*100)+"%";
+$("mapGrid").innerHTML=levels.map((l,i)=>{let done=levelResults[i]!==null,locked=i+1>unlocked;return `<button class="level ${done?"done":""} ${locked?"locked":""}" data-level="${i}" ${locked?"disabled":""}><span class="num">${done?"✓ COMPLETED":locked?"🔒 LOCKED":"MISSION "+(i+1)}</span><span class="emoji">${locked?"🔒":l.emoji}</span><strong>${l.short}</strong><small>${done?`คะแนนที่ได้ ${levelResults[i]} คะแนน`:l.desc}</small></button>`}).join("");
+document.querySelectorAll("[data-level]").forEach(b=>b.addEventListener("click",()=>startLevel(Number(b.dataset.level))));}
+function startGame(){team=$("teamName").value.trim()||"ทีมฮีโร่";shuffleReset();renderTest("preQuestions",pretest,"pre");showScreen("pretest");}
+function startLevel(i){if(i>unlocked-1)return;currentLevel=i;questionIndex=0;levelStartScore=score;renderQuestion();showScreen("mission");}
+function renderQuestion(){clearInterval(timerId);answered=false;timeLeft=45;const l=levels[currentLevel],q=l.questions[questionIndex];$("missionTag").textContent=`ด่าน ${currentLevel+1} / 4`; $("missionName").textContent=l.name;$("sceneEmoji").textContent=l.emoji;$("sceneText").textContent=q.scene;$("questionCount").textContent=`คำถาม ${questionIndex+1} จาก ${l.questions.length} • ตอบถูกข้อละ 10 คะแนน • ปรึกษาทีมและเตรียมอธิบายเหตุผล`; $("questionText").textContent=q.q;$("missionProgress").style.width=(questionIndex/l.questions.length*100)+"%";$("feedback").className="feedback hidden";$("feedback").textContent="";$("nextQuestion").classList.add("hidden");$("choices").innerHTML=q.opts.map((o,j)=>`<button class="choice" data-choice="${j}"><span class="letter">${String.fromCharCode(65+j)}</span><span>${o}</span></button>`).join("");document.querySelectorAll("[data-choice]").forEach(b=>b.addEventListener("click",()=>chooseAnswer(Number(b.dataset.choice))));$("timer").textContent="⏱ 00:45";timerId=setInterval(()=>{if(answered){clearInterval(timerId);return;}timeLeft--;$("timer").textContent=`⏱ 00:${String(Math.max(0,timeLeft)).padStart(2,"0")}`;if(timeLeft<=0){chooseAnswer(-1,true);}},1000);}
+function chooseAnswer(choice,timedOut=false){if(answered)return;answered=true;clearInterval(timerId);const q=levels[currentLevel].questions[questionIndex];const correct=choice===q.a;document.querySelectorAll("[data-choice]").forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("correct");if(j===choice&&!correct)b.classList.add("wrong");});if(correct)score+=10;const feedback=$("feedback");feedback.className="feedback "+(correct?"good":"bad");feedback.innerHTML=`<b>${timedOut?"หมดเวลา":correct?"🎉 ถูกต้อง!":"🧭 มาทบทวนกัน"}</b><br>${timedOut?"หมดเวลาแล้ว ":correct?"ทีมเลือกแนวทางเหมาะสม ":"คำตอบที่เหมาะสมคือ “"+q.opts[q.a]+"” "}${q.why}<br><span class="small">คะแนนทีมขณะนี้: ${score}</span>`;$("nextQuestion").textContent=questionIndex===levels[currentLevel].questions.length-1?"สรุปด่าน →":"ข้อต่อไป →";$("nextQuestion").classList.remove("hidden");$("missionProgress").style.width=((questionIndex+1)/levels[currentLevel].questions.length*100)+"%";}
+function nextQuestion(){if(!answered)return;if(questionIndex<levels[currentLevel].questions.length-1){questionIndex++;renderQuestion();return;}const idx=currentLevel;levelResults[idx]=score-levelStartScore; // คะแนนที่ทำได้ในด่านนี้
+// Award one badge for completing each level; correctness is shown in total score.
+if(!medals.includes(levels[idx].badge))medals.push(levels[idx].badge);unlocked=Math.max(unlocked,idx+2);renderMap();if(idx<3){showScreen("map");}else{renderTest("postQuestions",posttest,"post");showScreen("posttest");}}
+function submitPre(){preScore=gradeTest(pretest,"pre");renderMap();showScreen("map");}
+function submitPost(){postScore=gradeTest(posttest,"post");showResults();}
+function showResults(){ $("resultTeam").textContent=`${team} ทำภารกิจครบทั้ง 4 ด่านแล้ว`; $("finalScore").textContent=score;$("finalLevels").textContent=`${levelResults.filter(x=>x!==null).length}/4`;$("preResult").textContent=preScore===null?"—":preScore;$("postResult").textContent=postScore===null?"—":postScore;$("finalMedals").textContent=medals.length?medals.join(" • "):"ยังไม่มีเหรียญตรา";$("resultMedal").textContent=score>=100?"🏆":score>=70?"🥇":"🌟";$("resultTitle").textContent=score>=100?"สุดยอดทีมฮีโร่!":score>=70?"ภารกิจสำเร็จ!":"ขอบคุณที่ร่วมภารกิจ!";let diff=(postScore??0)-(preScore??0);$("learningSummary").textContent=`คะแนนแบบทดสอบก่อนเรียน ${preScore??"—"}/5 และหลังเรียน ${postScore??"—"}/5 ${preScore===null||postScore===null?"":diff>0?`คะแนนเพิ่มขึ้น ${diff} ข้อ`:diff<0?`คะแนนหลังเรียนลดลง ${Math.abs(diff)} ข้อ ควรทบทวนเนื้อหาอีกครั้ง`:"คะแนนเท่าเดิม ควรฝึกวิเคราะห์สถานการณ์เพิ่มเติม"} คะแนนเกม ${score} คะแนน การประเมินนี้เป็นข้อมูลเบื้องต้นของทีม ไม่ใช่หลักฐานยืนยันผลสัมฤทธิ์ทางการศึกษาโดยลำพัง`;showScreen("results");}
+$("startBtn").addEventListener("click",startGame);$("submitPre").addEventListener("click",submitPre);$("toMap").addEventListener("click",()=>{clearInterval(timerId);renderMap();showScreen("map")});$("backHome").addEventListener("click",()=>showScreen("home"));$("nextQuestion").addEventListener("click",nextQuestion);$("submitPost").addEventListener("click",()=>{postScore=gradeTest(posttest,"post");showResults()});$("restartBtn").addEventListener("click",()=>{shuffleReset();$("teamName").value=team;showScreen("home")});$("printBtn").addEventListener("click",()=>window.print());
+renderMap();
+</script>
+<style>@media print{body{background:white}.topbar,.footer,.actions,#home,#pretest,#map,#mission,#posttest{display:none!important}#results{display:block!important}.panel{box-shadow:none;border:0}.app{max-width:none}}</style>
+</body>
+</html>
